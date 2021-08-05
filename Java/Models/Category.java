@@ -1,33 +1,35 @@
-public class Tag {
- 
+package Models;
+public class Category {
+    
     private int id;
     private String name;
 
-    
-    public Tag(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public Category(){
+        
     }
 
-    public Tag() {
+    public Category(int id, String name){
+
     }
+
 
     //Getters e setters 
-
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
 
+    
 
-    
-    
-}
+}//Fim classe

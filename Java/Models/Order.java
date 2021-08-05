@@ -1,3 +1,4 @@
+package Models;
 public class Order {
     
     private int id;
@@ -52,16 +53,4 @@ public class Order {
     }
 
 
-
-
-
-
-
-
-
-    
-
-
-
-
-}
+}//Fim classe

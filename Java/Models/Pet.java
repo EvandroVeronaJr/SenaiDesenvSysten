@@ -1,7 +1,9 @@
+package Models;
 public class Pet {
     
     private int id;
     private String name;
+    private String urlPhoto;
     private Category category;
     private String status;
 
@@ -46,4 +48,4 @@ public class Pet {
 
 
     
-}
+}//Fim classe

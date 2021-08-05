@@ -1,3 +1,4 @@
+package Models;
 public class User {
     
     private int id;
@@ -75,8 +76,4 @@ public class User {
         this.userStatus = userStatus;
     }
     
-    
-    
-
-
-}
+}//Fim classe
