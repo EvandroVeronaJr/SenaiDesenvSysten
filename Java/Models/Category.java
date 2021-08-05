@@ -1,20 +1,19 @@
-package Models;
+package Java.Models;
+
 public class Category {
-    
+
     private int id;
     private String name;
-     
 
-    public Category(){
-        
-    }
-
-    public Category(int id, String name){
+    public Category() {
 
     }
 
+    public Category(int id, String name) {
 
-    //Getters e setters 
+    }
+
+    // Getters e setters
     public int getId() {
         return id;
     }
@@ -31,6 +30,4 @@ public class Category {
         this.name = name;
     }
 
-    
-
-}//Fim classe
+}// Fim classe

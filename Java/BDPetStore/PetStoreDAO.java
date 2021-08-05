@@ -1,9 +1,5 @@
-package BDPetStore;
+package Java.BDPetStore;
 
 public class PetStoreDAO {
-    
-
-    
-
 
 }
