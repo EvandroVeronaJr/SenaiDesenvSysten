@@ -21,7 +21,7 @@ body{
     
     margin-left: 8rem;
     margin-top: 12rem;
-    display: flex;
+    /* display: flex; */
     
 }
 .telaLogin{
@@ -47,6 +47,13 @@ body{
     padding-top: 13px;
 }
 
+.label-Login label{
+
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 19px;
+}
+
 .label-Login input{
     border: 0;
     border-bottom: 2px solid lightgrey;
@@ -55,33 +62,14 @@ body{
     font-size: 16px;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
+    -moz-transition:  all .3s ease-out;
     -webkit-appearance: none;
     border-radius: 0;
 }
 
-.label-float input:focus{
-    border-bottom: 2px solid #3951b2;
-}
 
-.label-Login input::placeholder{
-    color: transparent;
-}
 
-.label-float label{
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 13px;
-    transition:all .3s ease-out;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-}
 
-.label-float input:required:invalid + label{
-    border-bottom: 2px solid red;
-}
-.label-float input:required:invalid
 
 #CampNomeLogin:focus{
     
@@ -116,7 +104,7 @@ body{
     border-radius: 5px;
 }
 .SenhaTrLogin{
-
+    margin-top: 20rem;
     font-family: 'Consolas', Courier, monospace;
 }
 
