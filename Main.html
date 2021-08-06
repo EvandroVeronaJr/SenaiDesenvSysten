@@ -6,58 +6,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/main.css"/> 
+    <!-- <link rel="stylesheet" type="text/css" href="CSS/fundoPrincipal.css"/>  -->
+    
     <title>PetStore</title>
+
 </head>
 
 <body>
+    
+    <div id="MenuPrincipal">
+        <div class="Pet">
+            <div class="fundoImagem">
+                <img src="Img/Cachorro.jpg">
 
-    <div id="PainelPrincipal">
+                <div>
+                    <p class='labelPet'>Cachorros</p>
+                </div>
+            </div>
+        </div>
+        <div class="Pet">
+            <div class="fundoImagem">
+                <img src="Img/Gato.jpg">
+                <div>
+                    <p class='labelPet'>Gatos</p>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="Pet">
+            <div class="fundoImagem">
+                <img src="Img/Hasmter.jpg">
+                <div>
+                    <p class='labelPet'>Hamster</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="TelaEntrada">
 
         <div class="telaLogin">
 
+            <h1>Entra ae!</h1>
             <div id="CampLogin">
                 <table>
-                    <tr class="NomeTrLogin">
+                    <tr class="trLogin">
                         <div class="label-Login">
                             <label >Nome:</label>
-                            <input type="text" id="CampNomeLogin"  placeholder=" " required />
-                        </d
+                            <input type="text" id="CampNomeLogin"  placeholder="Vitão lindo" required/>
+                        </div>
                     </tr>
-                    <tr class="SenhaTrLogin">
+                    <tr class="trLogin">
                         <div class="label-Login">
                             <label>Senha:</label>
-                            <input id="CampSenhaLogin" type="password"   placeholder=" " required/>
+                            <input id="CampSenhaLogin" type="password"   placeholder="*******" required/>
                          
                         </div>
                     </tr>
-
+                    
                 </table>
                 
-                
-    
+                <button id="BtnEntrar" >Entrar</button>
             </div>
-          
+           
         </div>
 
         <div class="telaCadastro">
 
-            <div>
+
+            <div class="Cadastro-New">
+                <h1 id="h1-Cadastro">É novo por aqui?<br>Se junta ae!</h1>
+                <button id="BtnCadastro">Cadastrar</button>
+            </div>
+
+
+            <div id="CampCadastro">
+
                 <table>
                     <tr>
-                        <td>Nome:</td>
-                        <td><input type="text" name="Nome" /></td>
+                        <div class="label-Cadastro">
+                            <label >Nome:</label>
+                            <input type="text" id="CampNomeCadastro"  placeholder="Ex: João Teodoro" required/>
+                        </div>
                     </tr>
                     <tr>
-                        <td>Senha:</td>
-                        <td><input type="password" name="Senha"/></td>
-                        
+                        <div class="label-Cadastro">
+
+                            <label>Senha:</label>
+                            <input id="CampSenhaCadastro" type="password"   placeholder="*******" required/>
+                         
+                        </div>
                     </tr>
                     <tr>
-                        <td>Confirme a senha:</td>
-                        <td><input type="password" name="SenhaConfirm"/></td>
- 
+                        <div class="label-Cadastro">
+                            <label></label>
+                            <input id="CampSenhaCadastroConfirm" type="password"   placeholder="*******" required/>
+                        </div>
                     </tr>
+                    
                 </table>
+                
+                <button id="BtnEntrar" >Entrar</button>
             </div>
 
             
@@ -69,7 +119,7 @@
 
     <!--<script src="TypeScript/main.ts" ></script> -->
 
-
+    <script src="TypeScript/animation.ts"></script>
 
 </body>
 
