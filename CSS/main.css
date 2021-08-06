@@ -1,0 +1,127 @@
+body{
+    background-color: white;
+}
+
+#PainelPrincipal{
+
+    background-color: rgb(185, 184, 184);
+    width: 50em;
+    height: 30em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    display: flex;
+   
+
+}
+
+#CampLogin{
+    
+    margin-left: 8rem;
+    margin-top: 12rem;
+    display: flex;
+    
+}
+.telaLogin{
+
+
+}
+
+.NomeTr{
+
+    font-family: 'Consolas', Courier, monospace;
+
+}
+
+
+#CampNomeLogin:hover{
+    
+    border-color: red;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+.label-Login{
+    position: relative;
+    padding-top: 13px;
+}
+
+.label-Login input{
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.label-float input:focus{
+    border-bottom: 2px solid #3951b2;
+}
+
+.label-Login input::placeholder{
+    color: transparent;
+}
+
+.label-float label{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition:all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+}
+
+.label-float input:required:invalid + label{
+    border-bottom: 2px solid red;
+}
+.label-float input:required:invalid
+
+#CampNomeLogin:focus{
+    
+    transition: 1s;
+    outline: none;
+    border-color: blue;
+    box-shadow: 0 0 10px rgb(13, 30, 185);
+}
+
+#CampSenhaLogin:hover{
+    
+    border-color: red;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    
+}
+
+#CampSenhaLogin:focus{
+
+    transition: 1s;
+    outline: none;
+    border-color: blue;
+    box-shadow: 0 0 10px rgb(6, 81, 219);
+}
+
+#CampNomeLogin{
+    
+  
+    border-radius: 5px;
+}
+
+#CampSenhaLogin{
+    border-radius: 5px;
+}
+.SenhaTrLogin{
+
+    font-family: 'Consolas', Courier, monospace;
+}
+
+
+.telaCadastro{
+
+    display: none;
+}
