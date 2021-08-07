@@ -4,15 +4,14 @@ body{
 
 
 #MenuPrincipal{
-    margin-left: 11em;
-    margin-top: 11em;
+    margin-left: 18em;
+    margin-top: 14em;
     display: none;
 }
 
-#TelaEntrada{
 
-    /* animation-name: move;
-    animation-duration: 500ms; */
+#TelaEntrada{
+   
     background-color: rgb(185, 184, 184);
     width: 50em;
     height: 30em;
@@ -23,7 +22,7 @@ body{
     margin-top: 8rem;
     margin-bottom: auto;
     display: flex;
- 
+
 
 }
 /*Começo da tela de login*/
@@ -149,7 +148,8 @@ h1{
 }
 
 
-Button:hover{
+
+button:hover{
 
     cursor: pointer;
     transition: .3s;
@@ -178,11 +178,18 @@ button:focus{
     
 }
 .Cadastro-New{
+
     animation-name: inite2;
     animation-duration: 500ms;
     /* animation-delay: 250ms; */
 
 }
+
+.telacompra-show{
+    animation: show 500ms;
+    
+}
+
 .telaCadastro{
     size: 40px;
     margin-left: 83px;
@@ -244,6 +251,7 @@ button:focus{
 }
 
 
+
 #BtnCadastro{
     width: 200px;
     height: 40px;
@@ -287,7 +295,8 @@ button:focus{
 }
 
 
-/*Animação de tela login*/
+
+/*Animações do site */
 
 @keyframes down {
 
@@ -299,16 +308,6 @@ button:focus{
         transform: translateY(100%);
     }
     
-}
-.tela-hide{
-
-    animation: down 500ms forwards;
-
-
-}
-.telaMain-show{
-        animation: show 500ms ;
-        display: flex;
 }
 
 @keyframes move {
@@ -322,7 +321,6 @@ button:focus{
     }
     
 }
-
 @keyframes show {
     
     from{
@@ -334,19 +332,64 @@ button:focus{
  
     }
 }
-/* Barra de navegação */
+@keyframes show2 {
+    
+    from{
+        opacity: 0;
+        transform: rotateY(-34%);
+    }to{
+        opacity: 1;
+        transform: rotateY(0%);
+ 
+    }
+}
+@keyframes escala{
+    from{
+        transform: scale(1);
 
-.Pet div:hover{
+    }to{
+        transform: scale(1.1);
+
+    }
+}
+
+
+/*Pra baixo é mundo novo, tbm n sei*/
+.tela-hide{
+
+    animation: down 500ms forwards;
+
+
+}
+.telanovoPrincipal{
+
+    animation: show2 500ms ;
+    /* display: flex; */
+}
+.telaMain-show{
+        animation: show 500ms forwards;
+        display: flex;
+}
+
+.tela-princ-hide{
+    
+    animation: down 500ms forwards;
+}
+
+.telaCompraHide{
+
+    animation: down 500ms backwards;
+    /* display: flex; */
+
+}
+
+.Pet  div:hover{
 
     transition: 1s;
     box-shadow: 10px 10px 10px blue;
     animation: escala 500ms;
     animation-fill-mode: forwards;
 
-}
-.Pet{
-
-    margin-left: 40px;
 }
 .fundoImagem{
 
@@ -373,6 +416,7 @@ button:focus{
     justify-items: center;
 }
 img{
+
     border-radius: 4px;
     margin-top: 9px;
     width: 200px;
@@ -382,12 +426,91 @@ img{
 
 
 
-@keyframes escala{
-    from{
-        transform: scale(1);
 
-    }to{
-        transform: scale(1.1);
+/* Página de compras do site */
 
-    }
+.AreaCompra{
+    /* animation: move 500ms; */
+    margin-top: 180px;
+    margin-left: 30em;
+    display: none;
 }
+
+.Select-Compras{
+    margin-top: 40px;
+}
+
+#CategoriaID{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 47px;
+    font-size: 28px;
+}
+#CategoriaID select{
+
+   width: 134px;
+    font-size: 23px;
+}
+
+#IdadeID{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    font-size: 28px;
+}
+
+#IdadeID select{
+    width: 134px;
+    font-size: 23px;
+}
+
+#RacaId{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 54px;
+    font-size: 28px;
+
+}
+
+#RacaId select{
+    width: 154px;
+    font-size: 23px;
+}
+
+
+#CampValor{
+
+    width: 134px;
+    font-size: 23px;
+}
+
+#PanelShadow{
+    border-radius: 10px;
+    height: 360px;
+    width: 390px;
+    box-shadow: 9px 11px 15px black;
+    margin-left: 111px;
+}
+
+#BtnComprar{
+    border: 0;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: rgb(7, 167, 119);
+   
+    /* box-shadow: 3px 6px 6px black; */
+}
+#BtnVoltar{
+    border: 0;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: rgb(7, 167, 119);
+    /* box-shadow: 3px 6px 6px black; */
+}
+.Botoes-Compra{
+    
+    
+    margin-top: 81px;
+    font-size: 33px;
+    margin-left: 99px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+

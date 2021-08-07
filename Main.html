@@ -13,9 +13,48 @@
 </head>
 
 <body>
+
+    <div class='AreaCompra'>
+        <div id="PanelShadow">
+        <div id="CategoriaID" class="Select-Compras">
+            <label>Categoria:</label>
+            <select  id="cbEspecie">
+                <option value=" "></option>
+                <option value="Cachorro" id="CachorroId">Cachorro</option>
+                <option value="Gato" id="GatoId">Gato</option>
+                <option values="Hasmter" id="HasmterId">Hamster</option>
+            </select>
+        </div>
+        <div id="IdadeID" class="Select-Compras">
+            <label>Idade:</label>
+            <select>
+                <option value=" "></option>
+                <option value="Filhote">Filhote</option>
+                <option value="Adulto">Adulto</option>
+            </select>
+        </div>
+        <div id="RacaId" class="Select-Compras">
+            <label>Raça:</label>
+            <select>
+                <option value=" "></option>
+                <option value="Labrador">Labrador</option>
+                <option value="Poodle">Poodle</option>
+                <option value="gatoPersa">Gato persa</option>
+                <option value="Siames">Siamês</option>
+                <option value="Hamster">Hamster-chinês</option>
+            </select>
+        </div>
+       
+        <div class='Botoes-Compra'>
+            <button  id="BtnComprar">Comprar</button>
+            <button  id="BtnVoltar">Voltar</button>
+        </div>
+        
+        </div>
+    </div>
     
     <div id="MenuPrincipal">
-        <div class="Pet">
+        <div class="Pet" id="DogBtn">
             <div class="fundoImagem">
                 <img src="Img/Cachorro.jpg">
 
@@ -24,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="Pet">
+        <div class="Pet" id="GatoBtn">
             <div class="fundoImagem">
                 <img src="Img/Gato.jpg">
                 <div>
@@ -34,7 +73,7 @@
             </div>
         </div>
         
-        <div class="Pet">
+        <div class="Pet" id="Hamsterbtn">
             <div class="fundoImagem">
                 <img src="Img/Hasmter.jpg">
                 <div>
@@ -54,7 +93,7 @@
                     <tr class="trLogin">
                         <div class="label-Login">
                             <label >Nome:</label>
-                            <input type="text" id="CampNomeLogin"  placeholder="Vitão lindo" required/>
+                            <input type="text" id="CampNomeLogin"  placeholder="Vitor Lindão" required/>
                         </div>
                     </tr>
                     <tr class="trLogin">
