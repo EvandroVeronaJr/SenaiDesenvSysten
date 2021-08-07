@@ -3,14 +3,23 @@ const telaEntrada = document.querySelector("#TelaEntrada");
 const telaPrinc = document.querySelector('#MenuPrincipal');
 const telaCompra = document.querySelector('.AreaCompra');
 
-//Botões da tela principal 
+
+//Selects da tela de compra
 const DogSelect = document.querySelector('#CachorroId');
 const CatSelect = document.querySelector('#GatoId');
 const HamstSelect = document.querySelector('#HamsterId');
 
-//Botões da tela login
+//Elementos da tela login
 const btnLogin = document.querySelector("#BtnEntrar");//Botão da tela de login
-const btnCadastro = document.querySelector("#BtnEntrar");
+const btnCadastro = document.querySelector("#BtnCadastro");
+const campLoginAtual = document.querySelector('.telaLogin');
+const telaCadastro = document.querySelector('.telaCadastro');
+const campCadastro = document.querySelector('.Cadastro-New');
+const campLogin = document.querySelector('.Login-New');
+const campCadastroSaida = document.querySelector('.SaidaCad');
+const CampcadastroEntrada = document.querySelector('#CampCadastro');
+const CampCadastroAnimacao = document.querySelector('.EntradaInCad');
+const CampLoginAnimacao = document.querySelector('.EntradaInLogin');
 
 //Botões da tela de compra
 const btnComprar = document.querySelector('#BtnComprar');
@@ -64,7 +73,11 @@ btnVoltar.addEventListener("click", event => {
 btnCadastro.addEventListener('click', event => {
 
     event.preventDefault();
-    telaEntrada.classList.add("");
+    campCadastroSaida.classList.add("cadSaida");
+    campLoginAtual.classList.add('telaLoginSaida');
+    telaCadastro.classList.add("animacao-Cadastro");
+    CampCadastroAnimacao.classList.add('EntradaInCad');
+    
 })
 
 
@@ -117,6 +130,22 @@ telaEntrada.addEventListener("animationend", event => {//sai da tela  de login e
 
     }
     
+});
+
+telaEntrada.addEventListener("animationend", event => {//sai da tela  de login e vai pra principal
+
+    //desativa barra de rolagem durante animação
+    if(event.animationName == "moveleft"){
+
+       campCadastro.style.display = 'none';
+       campLoginAtual.style.display = 'none';
+       CampcadastroEntrada.style.display = 'block';
+       campLogin.style.display = 'flex';
+       CampCadastroAnimacao.style.display = 'block';
+       CampLoginAnimacao.style.display = 'block'
+
+}
+
 });
 
 

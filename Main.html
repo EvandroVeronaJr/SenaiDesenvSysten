@@ -5,54 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/main.css"/> 
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
     <!-- <link rel="stylesheet" type="text/css" href="CSS/fundoPrincipal.css"/>  -->
-    
+
     <title>PetStore</title>
 
 </head>
 
 <body>
 
+
+
     <div class='AreaCompra'>
         <div id="PanelShadow">
-        <div id="CategoriaID" class="Select-Compras">
-            <label>Categoria:</label>
-            <select  id="cbEspecie">
-                <option value=" "></option>
-                <option value="Cachorro" id="CachorroId">Cachorro</option>
-                <option value="Gato" id="GatoId">Gato</option>
-                <option values="Hasmter" id="HasmterId">Hamster</option>
-            </select>
-        </div>
-        <div id="IdadeID" class="Select-Compras">
-            <label>Idade:</label>
-            <select>
-                <option value=" "></option>
-                <option value="Filhote">Filhote</option>
-                <option value="Adulto">Adulto</option>
-            </select>
-        </div>
-        <div id="RacaId" class="Select-Compras">
-            <label>Raça:</label>
-            <select>
-                <option value=" "></option>
-                <option value="Labrador">Labrador</option>
-                <option value="Poodle">Poodle</option>
-                <option value="gatoPersa">Gato persa</option>
-                <option value="Siames">Siamês</option>
-                <option value="Hamster">Hamster-chinês</option>
-            </select>
-        </div>
-       
-        <div class='Botoes-Compra'>
-            <button  id="BtnComprar">Comprar</button>
-            <button  id="BtnVoltar">Voltar</button>
-        </div>
-        
+            <div id="CategoriaID" class="Select-Compras">
+                <label>Categoria:</label>
+                <select id="cbEspecie">
+                    <option value=" "></option>
+                    <option value="Cachorro" id="CachorroId">Cachorro</option>
+                    <option value="Gato" id="GatoId">Gato</option>
+                    <option values="Hasmter" id="HasmterId">Hamster</option>
+                </select>
+            </div>
+            <div id="IdadeID" class="Select-Compras">
+                <label>Idade:</label>
+                <select>
+                    <option value=" "></option>
+                    <option value="Filhote">Filhote</option>
+                    <option value="Adulto">Adulto</option>
+                </select>
+            </div>
+            <div id="RacaId" class="Select-Compras">
+                <label>Raça:</label>
+                <select>
+                    <option value=" "></option>
+                    <option value="Labrador">Labrador</option>
+                    <option value="Poodle">Poodle</option>
+                    <option value="gatoPersa">Gato persa</option>
+                    <option value="Siames">Siamês</option>
+                    <option value="Hamster">Hamster-chinês</option>
+                </select>
+            </div>
+
+            <div class='Botoes-Compra'>
+                <button id="BtnComprar">Comprar</button>
+                <button id="BtnVoltar">Voltar</button>
+            </div>
+
         </div>
     </div>
-    
+
+
     <div id="MenuPrincipal">
         <div class="Pet" id="DogBtn">
             <div class="fundoImagem">
@@ -72,7 +75,7 @@
 
             </div>
         </div>
-        
+
         <div class="Pet" id="Hamsterbtn">
             <div class="fundoImagem">
                 <img src="Img/Hasmter.jpg">
@@ -83,79 +86,93 @@
         </div>
 
     </div>
-    <div id="TelaEntrada">
 
-        <div class="telaLogin">
 
-            <h1>Entra ae!</h1>
-            <div id="CampLogin">
-                <table>
-                    <tr class="trLogin">
-                        <div class="label-Login">
-                            <label >Nome:</label>
-                            <input type="text" id="CampNomeLogin"  placeholder="Vitor Lindão" required/>
-                        </div>
-                    </tr>
-                    <tr class="trLogin">
-                        <div class="label-Login">
-                            <label>Senha:</label>
-                            <input id="CampSenhaLogin" type="password"   placeholder="*******" required/>
-                         
-                        </div>
-                    </tr>
-                    
-                </table>
-                
-                <button id="BtnEntrar" >Entrar</button>
+    <div class="Inlogin">
+        <div id="TelaEntrada">
+
+
+
+            <div class="telaLogin" class='telaLoginSaida'>
+
+                <h1>Bem Vindo!</h1>
+                <div id="CampLogin">
+                    <table>
+                        <tr class="trLogin">
+                            <div class="label-Login">
+                                <label>Nome:</label>
+                                <input type="text" id="CampNomeLogin" placeholder="Vitor Lindão" required />
+                            </div>
+                        </tr>
+                        <tr class="trLogin">
+                            <div class="label-Login">
+                                <label>Senha:</label>
+                                <input id="CampSenhaLogin" type="password" placeholder="*******" required />
+
+                            </div>
+                        </tr>
+
+                    </table>
+
+                    <button id="BtnEntrar">Entrar</button>
+                </div>
+
             </div>
-           
+
+            <div class="telaCadastro">
+
+                <div class="EntradaInLogin">
+                <div class="Login-New">
+                    <h1>Já é conhecido na area? <br>Volta ae!</h1>
+                    <button id="BtnLoginCad">Entrar</button>
+                </div>
+            </div>
+                <div class="Cadastro-New">
+                    <div class='SaidaCad'>
+                        <h1 id="h1-Cadastro">É novo por aqui?<br>Se junte a nós!</h1>
+                        <button id="BtnCadastro">Cadastrar</button>
+                    </div>
+
+                </div>
+
+                <div class="EntradaInCad">
+                    <div id="CampCadastro">
+
+                        <table>
+                            <tr>
+                                <div class="label-Cadastro">
+                                    <label>Nome:</label>
+                                    <input type="text" id="CampNomeCadastro" placeholder="Ex: João Teodoro" required />
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="label-Cadastro">
+
+                                    <label>Senha:</label>
+                                    <input id="CampSenhaCadastro" type="password" placeholder="*******" required />
+
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="label-Cadastro">
+                                    <label></label>
+                                    <input id="CampSenhaCadastroConfirm" type="password" placeholder="*******"
+                                        required />
+                                </div>
+                            </tr>
+
+                        </table>
+
+                        <button id="BtnEntrar2">Criar</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
         </div>
-
-        <div class="telaCadastro">
-
-
-            <div class="Cadastro-New">
-                <h1 id="h1-Cadastro">É novo por aqui?<br>Se junta ae!</h1>
-                <button id="BtnCadastro">Cadastrar</button>
-            </div>
-
-
-            <div id="CampCadastro">
-
-                <table>
-                    <tr>
-                        <div class="label-Cadastro">
-                            <label >Nome:</label>
-                            <input type="text" id="CampNomeCadastro"  placeholder="Ex: João Teodoro" required/>
-                        </div>
-                    </tr>
-                    <tr>
-                        <div class="label-Cadastro">
-
-                            <label>Senha:</label>
-                            <input id="CampSenhaCadastro" type="password"   placeholder="*******" required/>
-                         
-                        </div>
-                    </tr>
-                    <tr>
-                        <div class="label-Cadastro">
-                            <label></label>
-                            <input id="CampSenhaCadastroConfirm" type="password"   placeholder="*******" required/>
-                        </div>
-                    </tr>
-                    
-                </table>
-                
-                <button id="BtnEntrar" >Entrar</button>
-            </div>
-
-            
-            
-
-        </div>
-
     </div>
-
     <!--<script src="TypeScript/main.ts" ></script> -->
 
     <script src="TypeScript/animation.ts"></script>
