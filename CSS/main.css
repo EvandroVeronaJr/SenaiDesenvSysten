@@ -9,8 +9,17 @@ body{
     display: none;
 }
 
+.TelaNewCad{
+    
+    display: -webkit-inline-box;
+    margin-top: -20em;
+}
+
+.EntradaInCad2{
+    animation: inite 800ms;
+}
 .Inlogin{
-    animation: move  800ms;
+    animation: inite2 800ms;
 }
 #TelaEntrada{
    
@@ -28,29 +37,36 @@ body{
 
 }
 /*Começo da tela de login*/
-#CampLogin{
+#Login{
    
-    margin-left: 4rem;
+    margin-left: 7rem;
     margin-top: 10rem;
-    display: block; 
+    display: grid; 
     
+}
+
+
+
+.entrada-Login2{
+    animation: inite 500ms forwards;
 }
 
 .telaLogin h1{
 
     font-size: 32px;
     margin-top: 27px;
-    margin-left: 148px;
+    margin-left: 116px;
     position: fixed;
 }
 
 
 .telaLogin{
     
-    animation-name: inite;
+    animation: inite;
     animation-duration: 500ms;
 
 }
+
 .telaLoginSaida{
     animation: saida1 500ms forwards;  
 }
@@ -86,11 +102,17 @@ body{
     -webkit-appearance: none;
     border-radius: 0;
 }
+#CampLogin{
 
+    display: block;
+    margin-top: 10em;
+    margin-left: 3em;
+
+}
 
 
 #CampNomeLogin:hover{
-    
+    transition: 400ms;
     border-color: red;
     box-shadow: 0 0 10px rgb(255, 0, 0);
 }
@@ -105,7 +127,7 @@ body{
 }
 
 #CampSenhaLogin:hover{
-    
+    transition: 400ms;
     border-color: red;
     box-shadow: 0 0 10px rgb(255, 0, 0);
     
@@ -135,12 +157,12 @@ body{
 }
 .Login-New h1{
 
-    font-size: 23px;
-    display: block;
-    position: absolute;
-    margin-top: 6rem;
+    font-size: 20px;
+    
+    position: fixed;
+    margin-top: 5rem;
     margin-left: 3em;
-
+   
 }
 
 .cadSaida{
@@ -161,7 +183,8 @@ h1{
 
     display: flex;
     margin-top: 47px;
-    margin-left: 70px;
+    margin-left: 80px;
+    font-size: 27px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -224,13 +247,18 @@ button:focus{
 /*Começo da tela cadastro*/
 
 #CampCadastro{
-    
-    margin-left: 13rem;
-    margin-top: 9.1rem;
-    display: none; 
+    position: fixed;
+    margin-left: 29rem;
+    margin-top: -12rem;
+    display: none;
     
 }
 
+
+.Inlogin{
+    display: none;
+    animation: inite 500ms;
+}
 .EntradaInCad{
     display: none;
     animation: inite2 500ms;
@@ -240,12 +268,11 @@ button:focus{
     animation: inite 500ms;
 }
 
-
 .Cadastro-New{
-
+    position: absolute;
+    margin-left: auto;
+    margin-top: auto;
     animation: inite2 500ms;
-   
-    
 
 }
 
@@ -254,11 +281,20 @@ button:focus{
     
 }
 
+.telaSaida{
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    /* margin-right: auto; */
+}
+
 .telaCadastro{
     size: 40px;
-    margin-left: auto;
-    display: flex;
-    /* position: relative; */
+    height: 30em;
+    margin-left: 89px;
+    margin-right: auto;
+    display: block;
+    position: relative;
     background-color: blue;
     width: 389px;
     border-radius: 10px;
@@ -287,11 +323,8 @@ button:focus{
     border-radius: 5px;
 }
 
-
-
-
 .label-Cadastro input:hover{
-    
+    transition: 400ms;
     border-color: red;
     box-shadow: 0 0 10px rgb(255, 0, 0);
 }
@@ -305,6 +338,7 @@ button:focus{
 
 }
 #BtnCadastro:hover{
+    
     border-color: red;
     box-shadow: 0 0 10px rgb(255, 0, 0);
 }
@@ -318,8 +352,7 @@ button:focus{
 #BtnLoginCad{
     
     margin-right: 0em;
-    margin-left: 143px;
-    position: relative;
+    margin-left: 146px;
     margin-top: 15em;
     width: 95px;
     height: 43px;
@@ -330,6 +363,10 @@ button:focus{
 
 }
 
+.animacao-Login{
+    animation: moveright 800ms backwards;
+    animation-delay: 300ms;
+}
 
 .animacao-Cadastro{
     animation: moveleft 800ms forwards;
@@ -337,11 +374,11 @@ button:focus{
 }   
 
 #BtnCadastro{
-    
+
     width: 200px;
     height: 40px;
-    margin-top: 175px;
-    margin-left: 6rem;
+    margin-top: 195px;
+    margin-left: 101px;
     outline: none;
     border: 0;
     font-size: 21px;
@@ -349,6 +386,16 @@ button:focus{
     display: flex;
     justify-content: center;
 }
+.saidaTelaCad{
+    animation: saida1 500ms forwards;
+}
+
+
+.saidaCampCad-TelaCad{
+    animation: saida2 500ms forwards;
+}
+
+
 /*Fim da tela cadastro*/
 
 
@@ -431,6 +478,18 @@ button:focus{
     }to{
 
         transform: translateX(-106%);
+       
+    }
+    
+}
+@keyframes moveright {
+    from{
+        
+        transform: translateX(0em);
+
+    }to{
+        
+        transform: translateX(25.8em);
        
     }
     
