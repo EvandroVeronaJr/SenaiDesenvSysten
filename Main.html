@@ -12,9 +12,10 @@
 
 </head>
 
-<body>
+<body style="overflow: hidden;">
 
 
+   
 
     <div class='AreaCompra'>
         <div id="PanelShadow">
@@ -22,9 +23,9 @@
                 <label>Categoria:</label>
                 <select id="cbEspecie">
                     <option value=" "></option>
-                    <option value="Cachorro" id="CachorroId">Cachorro</option>
-                    <option value="Gato" id="GatoId">Gato</option>
-                    <option values="Hasmter" id="HasmterId">Hamster</option>
+                    <option value="1" id="CachorroId">Cachorro</option>
+                    <option value="2" id="GatoId">Gato</option>
+                    <option values="3" id="HasmterId">Hamster</option>
                 </select>
             </div>
             <div id="IdadeID" class="Select-Compras">
@@ -57,7 +58,7 @@
 
 
     <div id="MenuPrincipal">
-        <div class="Pet" id="DogBtn">
+        <div class="Pet" id="DogBtn" onclick="select('1')">
             <div class="fundoImagem">
                 <img src="Img/Cachorro.jpg">
 
@@ -66,7 +67,7 @@
                 </div>
             </div>
         </div>
-        <div class="Pet" id="GatoBtn">
+        <div class="Pet" id="GatoBtn" onclick="select('2')">
             <div class="fundoImagem">
                 <img src="Img/Gato.jpg">
                 <div>
@@ -76,7 +77,7 @@
             </div>
         </div>
 
-        <div class="Pet" id="Hamsterbtn">
+        <div class="Pet" id="Hamsterbtn" onclick="select('3')">
             <div class="fundoImagem">
                 <img src="Img/Hasmter.jpg">
                 <div>
@@ -101,7 +102,7 @@
                         <tr class="trLogin">
                             <div class="label-Login">
                                 <label>Nome:</label>
-                                <input type="text" id="CampNomeLogin" placeholder="Vitor Lindão" required />
+                                <input type="text" id="CampNomeLogin" placeholder="José da Silva" required />
                             </div>
                         </tr>
                         <tr class="trLogin">
@@ -114,7 +115,7 @@
 
                     </table>
 
-                    <button id="BtnEntrar">Entrar</button>
+                    <button id="BtnEntrar" class="efeitoBtn">Entrar</button>
 
                 </div>
             </div>
@@ -136,7 +137,7 @@
                 <div class="Cadastro-New">
                         <div class='SaidaCad'>
                             <h1 id="h1-Cadastro">É novo por aqui?<br>Se junte a nós!</h1>
-                            <button id="BtnCadastro">Cadastrar</button>
+                            <button  id="BtnCadastro">Cadastrar</button>
                         </div>
                     </div>
                 </div>
@@ -169,7 +170,7 @@
 
                         </table>
 
-                        <button id="BtnEntrar2">Criar</button>
+                        <button id="BtnEntrar2" class="efeitoBtn">Criar</button>
                     </div>
                 </div>
 
@@ -180,9 +181,15 @@
 
     </div>
 
+   
+
     <!--<script src="TypeScript/main.ts" ></script> -->
 
+    <ul class="squares">
+       
+    </ul>
     <script src="TypeScript/animation.ts"></script>
+   
 
 </body>
 

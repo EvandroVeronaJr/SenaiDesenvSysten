@@ -3,12 +3,6 @@ const telaEntrada = document.querySelector("#TelaEntrada");
 const telaPrinc = document.querySelector('#MenuPrincipal');
 const telaCompra = document.querySelector('.AreaCompra');
 
-
-//Selects da tela de compra
-const DogSelect = document.querySelector('#CachorroId');
-const CatSelect = document.querySelector('#GatoId');
-const HamstSelect = document.querySelector('#HamsterId');
-
 //Elementos da tela login
 const btnLogin = document.querySelector("#BtnEntrar");//Botão da tela de login
 const btnCadastro = document.querySelector("#BtnCadastro");
@@ -40,7 +34,6 @@ const BtnHamster = document.querySelector('#Hamsterbtn');
 //Ir para tela de compra
 BtnDog.addEventListener('click', event => {
 
-    DogSelect.setAttribute("Cachorro", "cachorro");
     event.preventDefault();
     telaPrinc.classList.add('tela-princ-hide')
     telaCompra.classList.add('tela-compra-show');
@@ -212,5 +205,37 @@ telaEntrada.addEventListener("animationend", event => {//sai da tela  de login e
 
 });
 
+
+//Quadrados animação
+
+const ulSquares = document.querySelector("ul.squares");
+
+for(let i = 0; i < 11; i++){
+    
+    const li = document.createElement("li");
+
+    const random = (min, max) => Math.random() * (max - min) + min 
+    
+    const delay = random(5, 0.1);
+    const size = Math.floor(random(10,120));
+    const position = random(1, 99);
+
+    //Tamanhos
+    li.style.width = `${size}px`;
+    li.style.height = `${size}px`;
+    li.style.bottom = `-${size}px`;
+
+    //Posições
+    li.style.left = `${position}%`
+
+    //Delay
+    li.style.animationDelay = `${delay}s`
+
+    ulSquares.appendChild(li);
+    
+}
+
+
+//Funções
 
 

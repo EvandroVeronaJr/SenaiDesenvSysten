@@ -1,5 +1,5 @@
 body{
-    background-color: white;
+    background-color: rgb(75, 6, 167);
 }
 
 
@@ -56,7 +56,7 @@ body{
     font-size: 32px;
     margin-top: 27px;
     margin-left: 116px;
-    position: fixed;
+    /* position: fixed; */
 }
 
 
@@ -81,8 +81,11 @@ body{
 
 .label-Login{
     
-    position: relative;
-    padding-top: 13px;
+    /* position: relative; */
+    padding-top: 21px;
+    margin-left: 0em;
+    display: flex;
+  
 }
 
 .label-Login label{
@@ -93,7 +96,7 @@ body{
 }
 
 .label-Login input{
-
+    transition: 400ms;
     border: 0;
     border-bottom: 2px solid lightgrey;
     outline: none;
@@ -105,8 +108,8 @@ body{
 #CampLogin{
 
     display: block;
-    margin-top: 10em;
-    margin-left: 3em;
+    margin-top: 4em;
+    margin-left: 4em;
 
 }
 
@@ -157,7 +160,7 @@ body{
 }
 .Login-New h1{
 
-    font-size: 20px;
+    font-size: 23px;
     
     position: fixed;
     margin-top: 5rem;
@@ -195,7 +198,7 @@ h1{
     width: 100px;
     height: 40px;
     margin-top: 68px;
-    margin-left: 6rem;
+    margin-left: 106px;
     outline: none;
     border: 0;
     align-items: center;
@@ -220,24 +223,20 @@ h1{
 }
 
 button{
+    transition: 700ms;
     border: 0;
     outline: 0;
     border-radius: 5px;
 }
 
-button:hover{
+.efeitoBtn:hover{
 
     cursor: pointer;
     transition: .3s;
-    box-shadow:  0 0  10px red;
+    box-shadow:  0 0  10px rgb(89, 6, 158);
 
 }
-button:focus{
 
-    transition: .3s;
-    box-shadow:  0 0  10px blue;
-
-}
 
 #CampSenhaCadastroConfirm{
 
@@ -248,7 +247,7 @@ button:focus{
 
 #CampCadastro{
     position: fixed;
-    margin-left: 29rem;
+    margin-left: 28rem;
     margin-top: -12rem;
     display: none;
     
@@ -295,7 +294,7 @@ button:focus{
     margin-right: auto;
     display: block;
     position: relative;
-    background-color: blue;
+    background-color: rgb(77, 2, 146);
     width: 389px;
     border-radius: 10px;
 }
@@ -315,6 +314,7 @@ button:focus{
     font-size: 16px;
     -webkit-appearance: none;
     border-radius: 0;
+    transition: 400ms;
 }
 
 
@@ -338,19 +338,31 @@ button:focus{
 
 }
 #BtnCadastro:hover{
-    
-    border-color: red;
-    box-shadow: 0 0 10px rgb(255, 0, 0);
+
+    /* outline: 1px; */
+    border: solid 1px;
+    cursor: pointer;
+    transition: 700ms;
+    background-color: transparent;
+    color: white;
 }
-#BtnCadastro:focus{
-    transition: .3s;
+#BtnCadastro{
+    transition: 700ms;
+    width: 200px;
+    height: 40px;
+    margin-top: 195px;
+    margin-left: 101px;
     outline: none;
-    border-color: green;
-    box-shadow: 0 0 10px rgb(6, 252, 178);
+    border: 0;
+    font-size: 21px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
+
 #BtnLoginCad{
-    
+    transition: 700ms;
     margin-right: 0em;
     margin-left: 146px;
     margin-top: 15em;
@@ -363,6 +375,14 @@ button:focus{
 
 }
 
+#BtnLoginCad:hover{
+    border: solid 1px;
+    cursor: pointer;
+    transition: 700ms;
+    background-color: transparent;
+    color: white;
+}
+
 .animacao-Login{
     animation: moveright 800ms backwards;
     animation-delay: 300ms;
@@ -373,19 +393,7 @@ button:focus{
     animation-delay: 300ms;
 }   
 
-#BtnCadastro{
 
-    width: 200px;
-    height: 40px;
-    margin-top: 195px;
-    margin-left: 101px;
-    outline: none;
-    border: 0;
-    font-size: 21px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 .saidaTelaCad{
     animation: saida1 500ms forwards;
 }
@@ -432,7 +440,7 @@ button:focus{
 
     }to{
         opacity: 0;
-        transform: translateX(-35%);
+        transform: translateX(-30%);
     }
 } 
 
@@ -443,7 +451,7 @@ button:focus{
 
     }to{
         opacity: 0;
-        transform: translateX(47px);
+        transform: translateX(40px);
     }
 } 
 
@@ -561,7 +569,7 @@ button:focus{
 
 .Pet  div:hover{
 
-    transition: 1s;
+    transition: 500ms;
     box-shadow: 10px 10px 10px blue;
     animation: escala 500ms;
     animation-fill-mode: forwards;
@@ -657,6 +665,7 @@ img{
 }
 
 #PanelShadow{
+    background-color: white;
     animation: move 500ms;
     border-radius: 10px;
     height: 360px;
@@ -690,3 +699,26 @@ img{
     
 }
 
+
+/*Quadrados*/
+.squares li{
+    
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.17);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    animation: up 1s infinite;
+  
+    
+
+}
+
+@keyframes up {
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(-1200px);
+    }
+}
