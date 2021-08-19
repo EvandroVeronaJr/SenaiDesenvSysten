@@ -30,6 +30,9 @@ const btnVoltar = document.querySelector("#BtnVoltar");
 const BtnDog = document.querySelector('#DogBtn');
 const BtnCat = document.querySelector('#GatoBtn');
 const BtnHamster = document.querySelector('#Hamsterbtn');
+const BtnLogoff = document.querySelector("#BtnSair");
+const barNav01 = document.querySelector('#BarNav02');
+const btnBuy = document.querySelector('#BotoesBuy');
 
 //Ir para tela de compra
 BtnDog.addEventListener('click', event => {
@@ -37,7 +40,7 @@ BtnDog.addEventListener('click', event => {
     event.preventDefault();
     telaPrinc.classList.add('tela-princ-hide')
     telaCompra.classList.add('tela-compra-show');
-
+    barNav01.classList.add('barnav-saida');
 });
 
 BtnHamster.addEventListener('click', event => {
@@ -45,7 +48,7 @@ BtnHamster.addEventListener('click', event => {
     event.preventDefault();
     telaPrinc.classList.add('tela-princ-hide')
     telaCompra.classList.add('tela-compra-show');
-
+    barNav01.classList.add('barnav-saida');
 
 });
 
@@ -54,7 +57,7 @@ BtnCat.addEventListener('click', event => {
     event.preventDefault();
     telaPrinc.classList.add('tela-princ-hide')
     telaCompra.classList.add('tela-compra-show');
-
+    barNav01.classList.add('barnav-saida');
 
 });/*Fim dos botões para tela compra*/
 
@@ -64,12 +67,13 @@ btnVoltar.addEventListener("click", event => {
     event.preventDefault();
     telaCompra.classList.add("telaCompraHide");
     telaPrinc.classList.add("telanovoPrincipal");
-
+    telaPrinc.classList.remove('tela-hide2');
+    barNav01.classList.remove('barnav-saida');
 
 
 });
 
-btnCadastro.addEventListener('click', event => {
+btnCadastro.addEventListener('click', event => {//Animação de aparecer os campos de cadastro
 
     event.preventDefault();
     campLoginAtual.classList.remove('Inlogin');
@@ -99,7 +103,10 @@ btnLogin.addEventListener("click", event => {//Ir para tela principal
     event.preventDefault();
     telaEntrada.classList.add("tela-hide");
     telaPrinc.classList.add("telaMain-show");
-
+    telaEntrada.classList.remove('tela-show1');
+    barNav01.classList.remove('barnav-saida');
+    telaPrinc.classList.remove('tela-hide2');
+    
 
 
 });
@@ -126,6 +133,7 @@ telaEntrada.addEventListener('animationend', event => {//Volta para tela de logi
         CampcadastroEntrada.classList.add('saidaCampCad-TelaCad');
         campLogin.classList.add('saidaTelaCad');
         campLogin.style.display = 'none';
+        // telaPrinc.style.display = 'none';
         
     }
 
@@ -135,7 +143,7 @@ telaEntrada.addEventListener('animationend', event => {//Volta para tela de logi
 telaCompra.addEventListener('animationend', event => {//Encerra animação anterior e volta para tela principal ou tela compra
 
     if (event.animationName == "down") {
-
+        
         telaCompra.style.display = 'none';
         telaPrinc.style.display = 'flex';
         telaPrinc.classList.remove('tela-princ-hide');
@@ -172,6 +180,8 @@ telaEntrada.addEventListener("animationend", event => {//sai da tela  de login e
 
         telaEntrada.style.display = 'none';
         telaPrinc.style.display = "flex";
+        barNav01.style.display = 'list-item';
+        btnBuy.style.display = '';
         document.querySelector('body').style.overflow = 'none';
 
     }
@@ -205,8 +215,34 @@ telaEntrada.addEventListener("animationend", event => {//sai da tela  de login e
 
 });
 
+BtnLogoff.addEventListener('click', event  => {//Botão para sair da tela principal e ir para tela login
 
-//Quadrados animação
+    event.preventDefault();
+    telaPrinc.classList.add('tela-hide2');
+    telaEntrada.classList.add('tela-show1');
+    barNav01.classList.add('barnav-saida');
+    telaEntrada.classList.remove('tela-hide');
+    telaPrinc.classList.remove('telaMain-show');
+    telaPrinc.classList.remove("telanovoPrincipal");
+    // telaPrinc.style.display = 'none;';
+
+})
+
+telaPrinc.addEventListener('animationend', event => {//Vai da tela principal para a tela de login
+
+    if (event.animationName == "down2") {
+        telaEntrada.style.display = 'flex';
+        btnBuy.style.display = 'none';
+        barNav01.style.display = 'none';
+        telaPrinc.style.display = 'none';
+        CampcadastroEntrada.style.display = 'none';
+        telaCadastroSaida.classList.remove('animacao-Login');
+        
+       
+       
+
+    }
+})
 
 const ulSquares = document.querySelector("ul.squares");
 
@@ -216,7 +252,7 @@ for(let i = 0; i < 11; i++){
 
     const random = (min, max) => Math.random() * (max - min) + min 
     
-    const delay = random(5, 0.1);
+    const delay = random(3, 0.1);
     const size = Math.floor(random(10,120));
     const position = random(1, 99);
 
@@ -234,6 +270,8 @@ for(let i = 0; i < 11; i++){
     ulSquares.appendChild(li);
     
 }
+
+
 
 
 //Funções

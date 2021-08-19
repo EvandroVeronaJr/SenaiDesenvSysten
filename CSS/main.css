@@ -1,5 +1,7 @@
 body{
-    background-color: rgb(75, 6, 167);
+    background-color: rgb(63, 10, 160);
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -23,7 +25,7 @@ body{
 }
 #TelaEntrada{
    
-    background-color: rgb(185, 184, 184);
+    background-color: rgb(100, 100, 100);
     width: 50em;
     height: 30em;
     border-radius: 10px;
@@ -33,7 +35,8 @@ body{
     margin-top: 8rem;
     margin-bottom: auto;
     display: flex;
-
+    
+   
 
 }
 /*Começo da tela de login*/
@@ -227,11 +230,12 @@ button{
     border: 0;
     outline: 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .efeitoBtn:hover{
 
-    cursor: pointer;
+    
     transition: .3s;
     box-shadow:  0 0  10px rgb(89, 6, 158);
 
@@ -294,7 +298,7 @@ button{
     margin-right: auto;
     display: block;
     position: relative;
-    background-color: rgb(77, 2, 146);
+    background-color: rgb(62, 8, 163);
     width: 389px;
     border-radius: 10px;
 }
@@ -339,10 +343,8 @@ button{
 }
 #BtnCadastro:hover{
 
-    /* outline: 1px; */
     border: solid 1px;
-    cursor: pointer;
-    transition: 700ms;
+    transition: 800ms;
     background-color: transparent;
     color: white;
 }
@@ -362,6 +364,7 @@ button{
 
 
 #BtnLoginCad{
+
     transition: 700ms;
     margin-right: 0em;
     margin-left: 146px;
@@ -377,7 +380,6 @@ button{
 
 #BtnLoginCad:hover{
     border: solid 1px;
-    cursor: pointer;
     transition: 700ms;
     background-color: transparent;
     color: white;
@@ -468,6 +470,29 @@ button{
     }
     
 }
+@keyframes down2 {
+
+    from{
+        opacity: 1;
+        transform: translateY(0%);
+    }to{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    
+}
+
+@keyframes up2 {
+
+    from{
+        opacity: 1;
+        transform: translateY(0%);
+    }to{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
+}
 
 @keyframes move {
     from{
@@ -504,7 +529,6 @@ button{
 }
 
 
-
 @keyframes show {
     
     from{
@@ -539,9 +563,19 @@ button{
 
 
 /*Pra baixo é mundo novo, tbm n sei*/
+.tela-show{
+    animation: show 500ms forwards;
+}
 .tela-hide{
 
     animation: down 500ms forwards;
+
+
+}
+
+.tela-hide2{
+
+    animation: down2 500ms forwards;
 
 
 }
@@ -570,10 +604,16 @@ button{
 .Pet  div:hover{
 
     transition: 500ms;
-    box-shadow: 10px 10px 10px blue;
-    animation: escala 500ms;
-    animation-fill-mode: forwards;
+    box-shadow: 10px 10px 10px rgb(142, 143, 221);
+    /* animation: escala 500ms;
+    animation-fill-mode: forwards; */
+    transform: scale(1.2);
 
+}
+
+.Pet div{
+    transition: 500ms;
+    transform: scale(1);
 }
 .fundoImagem{
 
@@ -672,6 +712,8 @@ img{
     width: 390px;
     box-shadow: 9px 11px 15px black;
     margin-left: 111px;
+    margin: 0;
+    padding: 0;
 }
 
 #BtnComprar{
@@ -699,17 +741,57 @@ img{
     
 }
 
+/* Barra de navegação */
 
-/*Quadrados*/
+.barnav-saida{
+    animation: up2 500ms forwards;
+}
+
+
+#barNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 101em;
+    background-color: rgb(39, 39, 39);
+    margin-left: -1207px;
+    margin-top: -14em;
+
+}
+
+li button{
+    display: block;
+    color: black;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    border-radius: 0;
+    height: 47px;
+    width: 86px;
+    padding: 0;
+    margin: 0;
+}
+
+li button:hover{
+
+
+    background-color: rgb(58, 59, 59);
+    color: white;
+}
+
+#BotoesBuy{
+    display: flex;
+}
+
+
 .squares li{
     
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.17);
+    background-color: rgba(184, 178, 178, 0.17);
     display: block;
     position: absolute;
     bottom: 0;
-    animation: up 1s infinite;
+    animation: up 2s infinite;
   
     
 

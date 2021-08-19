@@ -15,7 +15,7 @@
 <body style="overflow: hidden;">
 
 
-   
+
 
     <div class='AreaCompra'>
         <div id="PanelShadow">
@@ -49,8 +49,8 @@
             </div>
 
             <div class='Botoes-Compra'>
-                <button id="BtnComprar">Comprar</button>
-                <button id="BtnVoltar">Voltar</button>
+                <button id="BtnComprar" class="efeitoBtn">Comprar</button>
+                <button id="BtnVoltar" class="efeitoBtn">Voltar</button>
             </div>
 
         </div>
@@ -58,32 +58,42 @@
 
 
     <div id="MenuPrincipal">
-        <div class="Pet" id="DogBtn" onclick="select('1')">
-            <div class="fundoImagem">
-                <img src="Img/Cachorro.jpg">
 
-                <div>
-                    <p class='labelPet'>Cachorros</p>
+       
+
+        <div id="BotoesBuy">
+            <div class="Pet" id="DogBtn">
+                <div class="fundoImagem">
+                    <img src="Img/Cachorro.jpg">
+
+                    
+                        <p class='labelPet'>Cachorros</p>
+                    
+                </div>
+            </div>
+            <div class="Pet" id="GatoBtn">
+                <div class="fundoImagem">
+                    <img src="Img/Gato.jpg">
+                    
+                        <p class='labelPet'>Gatos</p>
+                    
+
+                </div>
+            </div>
+
+            <div class="Pet" id="Hamsterbtn">
+                <div class="fundoImagem">
+                    <img src="Img/Hasmter.jpg">
+                    
+                        <p class='labelPet'>Hamster</p>
+                
                 </div>
             </div>
         </div>
-        <div class="Pet" id="GatoBtn" onclick="select('2')">
-            <div class="fundoImagem">
-                <img src="Img/Gato.jpg">
-                <div>
-                    <p class='labelPet'>Gatos</p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="Pet" id="Hamsterbtn" onclick="select('3')">
-            <div class="fundoImagem">
-                <img src="Img/Hasmter.jpg">
-                <div>
-                    <p class='labelPet'>Hamster</p>
-                </div>
-            </div>
+        <div id="BarNav02">
+            <ul id="barNav">
+                <li><button id="BtnSair">Sair</button></li>
+            </ul>
         </div>
 
     </div>
@@ -134,10 +144,10 @@
                     </div>
                 </div>
                 <div class="TelaNewCad">
-                <div class="Cadastro-New">
+                    <div class="Cadastro-New">
                         <div class='SaidaCad'>
                             <h1 id="h1-Cadastro">É novo por aqui?<br>Se junte a nós!</h1>
-                            <button  id="BtnCadastro">Cadastrar</button>
+                            <button id="BtnCadastro">Cadastrar</button>
                         </div>
                     </div>
                 </div>
@@ -181,15 +191,14 @@
 
     </div>
 
-   
-
-    <!--<script src="TypeScript/main.ts" ></script> -->
 
     <ul class="squares">
-       
+
     </ul>
+
+    <script src="TypeScript/Controller/areacompra.ts"></script>
     <script src="TypeScript/animation.ts"></script>
-   
+
 
 </body>
 
